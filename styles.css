@@ -1,0 +1,326 @@
+body {
+  background: rgb(251, 236, 249) !important;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: blueviolet;
+  }
+}
+
+/* navigation bar */
+
+.navbar {
+  background-color: #f8f9fa;
+  border-bottom: 3px solid;
+  margin-bottom: 0;
+}
+
+.navbar li {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: monospace;
+  padding: 5px;
+}
+
+a:hover {
+  color: magenta !important;
+  transition: 0.5s;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.title {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-top: 2em;
+  letter-spacing: 0em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid blueviolet;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 3rem !important;
+  font-weight: 900;
+  color: rgb(80, 80, 80);
+}
+
+span {
+  font-family: monospace;
+  color: blueviolet;
+}
+
+p {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgb(80, 80, 80);
+  margin-bottom: 2em;
+}
+
+.btn {
+  border: 3px solid !important;
+  background-color: aliceblue !important;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 900 !important;
+  font-family: monospace !important;
+  box-shadow: 5px 5px;
+  margin-top: 2em;
+}
+
+.btn:active {
+  background-color: #f8f9fa !important;
+  box-shadow: 0px 0px;
+  transform: translateY(5px);
+}
+
+img {
+  width: 15em;
+  height: 20em;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 7px 7px;
+  margin-top: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-envelope,
+.fa-github,
+.fa-linkedin,
+.fa-figma,
+.fa-codepen {
+  font-size: 2em;
+  margin: 1em;
+  color: black;
+}
+
+.fa-envelope:hover,
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-figma:hover,
+.fa-codepen:hover {
+  color: magenta;
+  transform: translateY(-5px);
+}
+
+.hr {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+/* about me */
+
+.about {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.title-2 {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-top: 2em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.small {
+  color: black;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.technologies li {
+  margin: 1em;
+}
+
+i {
+  font-size: 5em;
+}
+
+i:hover,
+svg:hover {
+  transform: translateY(-8px);
+}
+
+svg {
+  width: 5em;
+  height: 5em;
+  color: green;
+}
+
+.fa-bootstrap {
+  color: #9660e7;
+}
+
+.fa-html5 {
+  color: #e34f26;
+}
+
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.fa-js-square {
+  color: #f7df1e;
+}
+
+.fa-react {
+  color: #61dafb;
+}
+
+.fa-node-js {
+  color: #3c873a;
+}
+
+.fa-sass {
+  color: #f032da;
+}
+
+/* projects */
+
+.title-3 {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 2em;
+  color: blueviolet !important;
+}
+
+.todo {
+  width: 150px;
+  height: auto;
+}
+
+.card {
+  outline: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h3 {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* contact */
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sobre {
+  font-size: 9vw;
+}
+
+.btn-2 {
+  height: 100px;
+  width: 300px;
+  font-size: 3em !important;
+  font-family: monospace !important;
+  margin-bottom: 2em;
+}
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: black;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  color: black;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+/* media query mobile */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  img{
+    width:100%;
+    height: auto;
+  }
+  .btn-2 {
+    height: 50px;
+    width: 200px;
+    font-size: 1.5em !important;
+  }
+}
+
+
+
