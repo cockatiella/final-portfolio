@@ -113,6 +113,10 @@ a {
   color: black;
 }
 
+ul{
+  padding-left: 0 !important;
+}
+
 .fa-envelope,
 .fa-github,
 .fa-linkedin,
