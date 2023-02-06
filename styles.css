@@ -1,5 +1,5 @@
 body {
-  background: rgb(252, 218, 244) !important;
+  background: lavender !important;
 }
 
 @keyframes typing {
@@ -17,16 +17,16 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: blueviolet;
+    border-color: violet;
   }
 }
 
 /* navigation bar */
 
 .navbar {
-  background-color: #f8f9fa;
   border-bottom: 3px solid;
   margin-bottom: 0;
+  background-color: #f8f9fa;
 }
 
 .navbar li {
@@ -58,7 +58,7 @@ a:hover {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid blueviolet;
+  border-right: 0.15em solid palevioletred;
 }
 
 h2 {
@@ -70,7 +70,7 @@ h2 {
 
 span {
   font-family: monospace;
-  color: blueviolet;
+  color: violet;
 }
 
 p {
@@ -113,7 +113,7 @@ a {
   color: black;
 }
 
-ul{
+ul {
   padding-left: 0 !important;
 }
 
@@ -226,7 +226,7 @@ svg {
   font-size: 1.5rem;
   font-weight: 900;
   margin-top: 2em;
-  color: blueviolet !important;
+  color: rgb(232, 106, 205) !important;
 }
 
 .todo {
@@ -274,12 +274,12 @@ h3 {
 .footer {
   width: 100vw;
   height: 100px;
-  background-color: whitesmoke;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-top: 2px solid;
+  background-color: #f8f9fa;
 }
 
 .contact-links {
@@ -315,8 +315,8 @@ h3 {
     text-align: center;
   }
 
-  img{
-    width:100%;
+  img {
+    width: 100%;
     height: auto;
   }
   .btn-2 {
@@ -325,6 +325,3 @@ h3 {
     font-size: 1.5em !important;
   }
 }
-
-
-
