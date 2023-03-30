@@ -1,6 +1,43 @@
-body {
-  background: lavender !important;
+.dark-mode {
+  background-color: #333;
+  color: #fff;
 }
+
+.btn-dark-mode {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.fa-moon{
+  font-size: 2rem;
+  padding: 10px;
+  background: linear-gradient(45deg, lemonchiffon, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-sun{
+  font-size: 2rem;
+  padding: 10px;
+  background: linear-gradient(45deg, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-moon:active {
+  color: lemonchiffon;
+  
+}
+
+body.dark-mode p {
+  color: lavenderblush;
+}
+
+body.dark-mode i {
+  color: white;
+}
+/* other CSS rules */
 
 @keyframes typing {
   from {
@@ -17,7 +54,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: violet;
+    border-color: blueviolet;
   }
 }
 
@@ -26,9 +63,18 @@ body {
 .navbar {
   border-bottom: 3px solid;
   margin-bottom: 0;
-  background-color: #f8f9fa;
+  background-color: #333;
+ 
 }
-
+.navbar a {
+  color: white !important;
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.5s;
+}
 .navbar li {
   font-size: 1em;
   font-weight: bold;
@@ -37,9 +83,26 @@ body {
 }
 
 a:hover {
-  color: magenta !important;
+  color: blueviolet !important;
   transition: 0.5s;
 }
+
+.navbar-toggler{
+  border: none;
+  outline: none;
+  background-color: white !important;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  padding: 10px;
+  background: white !important;
+}
+
+.navbar-toggler:hover{
+  color: blueviolet !important;
+  transition: 0.3s;
+}
+
 
 .wrapper {
   display: flex;
@@ -58,7 +121,7 @@ a:hover {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid palevioletred;
+  border-right: 0.15em solid blueviolet; /* The typwriter cursor */
 }
 
 h2 {
@@ -70,7 +133,7 @@ h2 {
 
 span {
   font-family: monospace;
-  color: violet;
+  color: blueviolet;
 }
 
 p {
@@ -104,7 +167,7 @@ img {
   height: 20em;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 7px 7px;
+  box-shadow: 7px 7px black;
   margin-top: 2em;
 }
 
@@ -132,7 +195,7 @@ ul {
 .fa-linkedin:hover,
 .fa-figma:hover,
 .fa-codepen:hover {
-  color: magenta;
+  color: blueviolet;
   transform: translateY(-5px);
 }
 
@@ -226,7 +289,7 @@ svg {
   font-size: 1.5rem;
   font-weight: 900;
   margin-top: 2em;
-  color: rgb(232, 106, 205) !important;
+  color: blueviolet !important;
 }
 
 .todo {
@@ -264,9 +327,9 @@ h3 {
 }
 
 .btn-2 {
-  height: 100px;
-  width: 300px;
-  font-size: 3em !important;
+  height: 80px;
+  width: 200px;
+  font-size: 1.5em !important;
   font-family: monospace !important;
   margin-bottom: 2em;
 }
@@ -292,6 +355,11 @@ h3 {
   font-family: monospace;
   font-size: 1.2rem;
   font-weight: 900;
+  color: black;
+}
+
+.fa-arrow-up {
+  font-size: 2em;
   color: black;
 }
 
@@ -322,6 +390,6 @@ h3 {
   .btn-2 {
     height: 50px;
     width: 200px;
-    font-size: 1.5em !important;
+    font-size: 1em !important;
   }
 }

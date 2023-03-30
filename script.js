@@ -5,3 +5,11 @@ contactBtn.addEventListener("click", function () {
   let contactMe = document.getElementById("contact-me");
   contactMe.scrollIntoView({ behavior: "smooth" });
 });
+
+function toggleDarkMode() {
+  var body = document.body;
+  var icon = document.querySelector(".btn-dark-mode i");
+  body.classList.toggle("dark-mode");
+  icon.classList.toggle("fa-moon");
+  icon.classList.toggle("fa-sun");
+}
