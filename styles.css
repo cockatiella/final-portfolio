@@ -1,6 +1,6 @@
 .dark-mode {
   background-color: #333;
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btn-dark-mode {
@@ -10,7 +10,36 @@
   cursor: pointer;
 }
 
-.fa-moon{
+body.dark-mode .fa-bootstrap {
+  color: violet;
+}
+
+body.dark-mode .fa-css3-alt {
+  color: rgb(0, 110, 255);
+}
+
+body.dark-mode .fa-html5 {
+  color: rgb(255, 0, 0);
+}
+
+body.dark-mode .fa-js-square {
+  color: rgb(255, 255, 0);
+}
+
+body.dark-mode .fa-react {
+  color: rgb(0, 255, 255);
+}
+
+body.dark-mode .fa-sass {
+  color: rgb(255, 0, 255);
+}
+
+body.dark-mode .fa-node-js {
+  color: rgb(0, 255, 0);
+}
+
+
+.fa-moon {
   font-size: 2rem;
   padding: 10px;
   background: linear-gradient(45deg, lemonchiffon, orange);
@@ -18,7 +47,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.fa-sun{
+.fa-sun {
   font-size: 2rem;
   padding: 10px;
   background: linear-gradient(45deg, orange, yellow);
@@ -27,11 +56,10 @@
 }
 .fa-moon:active {
   color: lemonchiffon;
-  
 }
 
 body.dark-mode p {
-  color: lavenderblush;
+  color: lavender;
 }
 
 body.dark-mode i {
@@ -54,7 +82,7 @@ body.dark-mode i {
     border-color: transparent;
   }
   50% {
-    border-color: blueviolet;
+    border-color: violet;
   }
 }
 
@@ -64,13 +92,12 @@ body.dark-mode i {
   border-bottom: 3px solid;
   margin-bottom: 0;
   background-color: #333;
- 
 }
 .navbar a {
   color: white !important;
   font-family: monospace;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.3rem;
+  font-weight: 400;
   text-decoration: none;
   padding: 10px;
   transition: 0.5s;
@@ -83,11 +110,11 @@ body.dark-mode i {
 }
 
 a:hover {
-  color: blueviolet !important;
+  color: violet !important;
   transition: 0.5s;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
   outline: none;
   background-color: white !important;
@@ -98,11 +125,10 @@ a:hover {
   background: white !important;
 }
 
-.navbar-toggler:hover{
-  color: blueviolet !important;
+.navbar-toggler:hover {
+  color: violet !important;
   transition: 0.3s;
 }
-
 
 .wrapper {
   display: flex;
@@ -121,7 +147,7 @@ a:hover {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid blueviolet; /* The typwriter cursor */
+  border-right: 0.15em solid violet; /* The typwriter cursor */
 }
 
 h2 {
@@ -133,20 +159,19 @@ h2 {
 
 span {
   font-family: monospace;
-  color: blueviolet;
+  color: violet;
 }
 
 p {
   font-family: monospace;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: rgb(80, 80, 80);
+  font-size: 1.2rem;
+  color: black;
   margin-bottom: 2em;
 }
 
 .btn {
   border: 3px solid !important;
-  background-color: aliceblue !important;
+  background-color: lightcyan !important;
   border-radius: 10px;
   padding: 10px;
   font-size: 1.5rem;
@@ -215,7 +240,7 @@ ul {
 .title-2 {
   font-family: "JetBrains Mono", monospace !important;
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: 400;
   margin-top: 2em;
 }
 
@@ -363,13 +388,19 @@ h3 {
   color: black;
 }
 
+.back-to-top {
+  text-align: center;
+}
+
 .back-to-top a {
   text-decoration: none;
   color: black;
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 400;
+
 }
+
 
 /* media query mobile */
 
