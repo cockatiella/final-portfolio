@@ -91,10 +91,8 @@ body.dark-mode i {
 .navbar {
   border-bottom: 3px solid;
   margin-bottom: 0;
-  background-color: #333;
 }
 .navbar a {
-  color: white !important;
   font-family: monospace;
   font-size: 1.3rem;
   font-weight: 400;
