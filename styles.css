@@ -38,7 +38,6 @@ body.dark-mode .fa-node-js {
   color: rgb(0, 255, 0);
 }
 
-
 .fa-moon {
   font-size: 2rem;
   padding: 10px;
@@ -185,7 +184,8 @@ p {
   transform: translateY(5px);
 }
 
-img {
+.sofia,
+.todo {
   width: 15em;
   height: 20em;
   border: 1px solid black;
@@ -249,6 +249,7 @@ ul {
 .small {
   color: black;
   font-family: "JetBrains Mono", monospace;
+  text-align: center;
 }
 
 .technologies ul {
@@ -266,15 +267,46 @@ i {
   font-size: 5em;
 }
 
-i:hover,
+/* i:hover,
 svg:hover {
   transform: translateY(-8px);
+} */
+
+.vite,
+.canva {
+  width: 5em;
+  height: 5em;
+}
+
+.npm{
+  width: 8em;
+  height: 4em;
+}
+
+.fa-git-alt {
+  color: #f34f29;
+}
+
+.tailwind {
+  width: 6em;
+  height: 5em;
+}
+
+.mongo {
+  color: green;
+}
+
+.xd {
+  color: #470137;
+}
+.figma2 {
+  width: 5em;
+  height: 5em;
 }
 
 svg {
   width: 5em;
   height: 5em;
-  color: green;
 }
 
 .fa-bootstrap {
@@ -396,9 +428,7 @@ h3 {
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
   font-weight: 400;
-
 }
-
 
 /* media query mobile */
 
