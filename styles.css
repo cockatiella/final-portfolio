@@ -64,6 +64,15 @@ body.dark-mode p {
 body.dark-mode i {
   color: white;
 }
+
+body.dark-mode small{
+  color: white;
+
+}
+
+body.dark-mode .nav-link {
+  color: white;
+}
 /* other CSS rules */
 
 @keyframes typing {
@@ -404,7 +413,6 @@ h3 {
   justify-content: space-around;
   align-items: center;
   border-top: 2px solid;
-  background-color: #f8f9fa;
 }
 
 .contact-links {
