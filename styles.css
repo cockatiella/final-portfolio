@@ -207,7 +207,8 @@ ul {
 .fa-github,
 .fa-linkedin,
 .fa-figma,
-.fa-codepen {
+.fa-codepen,
+.fa-dribbble {
   font-size: 2em;
   margin: 1em;
   color: black;
@@ -217,7 +218,8 @@ ul {
 .fa-github:hover,
 .fa-linkedin:hover,
 .fa-figma:hover,
-.fa-codepen:hover {
+.fa-codepen:hover,
+.fa-dribbble:hover {
   color: blueviolet;
   transform: translateY(-5px);
 }
