@@ -186,12 +186,17 @@ p {
 
 .sofia,
 .todo {
-  width: 15em;
+  width: 16em;
   height: 20em;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 7px 7px black;
   margin-top: 2em;
+}
+
+.sofia:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 a {
@@ -280,7 +285,7 @@ svg:hover {
   height: 5em;
 }
 
-.npm{
+.npm {
   width: 8em;
   height: 4em;
 }
