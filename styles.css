@@ -38,6 +38,12 @@ body.dark-mode .fa-node-js {
   color: rgb(0, 255, 0);
 }
 
+body.dark-mode .btn:hover {
+  background-color: slateblue !important;
+  color: white !important;
+  transition: 0.5s;
+}
+
 .fa-moon {
   font-size: 2rem;
   padding: 10px;
@@ -53,6 +59,7 @@ body.dark-mode .fa-node-js {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .fa-moon:active {
   color: lemonchiffon;
 }
@@ -72,24 +79,28 @@ body.dark-mode small {
 body.dark-mode .nav-link {
   color: white;
 }
+
 /* other CSS rules */
 
 @keyframes typing {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
-    border-color: violet;
+    border-color: slateblue;
   }
 }
 
@@ -99,6 +110,7 @@ body.dark-mode .nav-link {
   border-bottom: 3px solid;
   margin-bottom: 0;
 }
+
 .navbar a {
   font-family: monospace;
   font-size: 1.3rem;
@@ -107,6 +119,7 @@ body.dark-mode .nav-link {
   padding: 10px;
   transition: 0.5s;
 }
+
 .navbar li {
   font-size: 1em;
   font-weight: bold;
@@ -115,8 +128,9 @@ body.dark-mode .nav-link {
 }
 
 a:hover {
-  color: blueviolet !important;
+  color: slateblue !important;
   transition: 0.5s;
+  font-weight: bold;
 }
 
 .navbar-toggler {
@@ -131,7 +145,7 @@ a:hover {
 }
 
 .navbar-toggler:hover {
-  color: blueviolet !important;
+  color: slateblue !important;
   transition: 0.3s;
 }
 
@@ -147,12 +161,17 @@ a:hover {
   font-size: 4rem;
   font-weight: 900;
   margin-top: 2em;
-  letter-spacing: 0em; /* Adjust as needed */
+  letter-spacing: 0em;
+  /* Adjust as needed */
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid violet; /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid slateblue;
+  /* The typwriter cursor */
 }
 
 h2 {
@@ -164,7 +183,7 @@ h2 {
 
 span {
   font-family: monospace;
-  color: violet;
+  color: slateblue;
 }
 
 p {
@@ -176,7 +195,7 @@ p {
 
 .btn {
   border: 3px solid !important;
-  background-color: rgb(243, 187, 195) !important;
+  background-color: lavender !important;
   border-radius: 10px;
   padding: 10px;
   font-size: 1.5rem;
@@ -186,11 +205,7 @@ p {
   margin-top: 2em;
 }
 
-.btn:active {
-  background-color: #f8f9fa !important;
-  box-shadow: 0px 0px;
-  transform: translateY(5px);
-}
+
 
 .sofia,
 .todo {
@@ -203,7 +218,6 @@ p {
 }
 
 .sofia:hover {
-  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -233,8 +247,8 @@ ul {
 .fa-figma:hover,
 .fa-codepen:hover,
 .fa-dribbble:hover {
-  color: blueviolet;
-  transform: translateY(-5px);
+  color: slateblue;
+  transition: all 0.5s;
 }
 
 .hr {
@@ -306,6 +320,7 @@ svg:hover {
 .trello {
   margin-top: 30px;
 }
+
 .npm {
   width: 8em;
   height: auto;
@@ -319,6 +334,7 @@ svg:hover {
   width: 6em;
   height: auto;
 }
+
 /* 
 .mongo {
   color: green;
@@ -327,6 +343,7 @@ svg:hover {
 .xd {
   color: #470137;
 }
+
 .figma2 {
   width: 5em;
   height: 5em;
@@ -368,11 +385,11 @@ svg {
 /* projects */
 
 .title-3 {
-  font-family: "JetBrains Mono", monospace !important;
+  font-family: monospace !important;
   font-size: 1.5rem;
   font-weight: 900;
   margin-top: 2em;
-  color: blueviolet !important;
+  color: slateblue !important;
 }
 
 .todo {
@@ -387,7 +404,9 @@ svg {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 h3 {
@@ -473,6 +492,7 @@ h3 {
     width: 100%;
     height: auto;
   }
+
   .btn-2 {
     height: 50px;
     width: 200px;
