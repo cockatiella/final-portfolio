@@ -1,6 +1,17 @@
 .dark-mode {
   background-color: #333;
-  color: whitesmoke;
+  color: white;
+}
+
+/* light-mode background, overridden when dark-mode class is present */
+html,
+body {
+  background-color: #ebfdeb !important;
+}
+
+body.dark-mode,
+html.dark-mode {
+  background-color: #333 !important;
 }
 
 .btn-dark-mode {
@@ -11,7 +22,7 @@
 }
 
 body.dark-mode .fa-bootstrap {
-  color: violet;
+  color: #589258;
 }
 
 body.dark-mode .fa-css3-alt {
@@ -39,7 +50,7 @@ body.dark-mode .fa-node-js {
 }
 
 body.dark-mode .btn:hover {
-  background-color: slateblue !important;
+  background-color: #589258 !important;
   color: white !important;
   transition: 0.5s;
 }
@@ -74,7 +85,7 @@ body.dark-mode .btn:hover {
 }
 
 body.dark-mode p {
-  color: lavender;
+  color: #98fb98;
 }
 
 body.dark-mode i {
@@ -109,7 +120,7 @@ body.dark-mode .nav-link {
   }
 
   50% {
-    border-color: slateblue;
+    border-color: #2d5016;
   }
 }
 
@@ -137,7 +148,7 @@ body.dark-mode .nav-link {
 }
 
 a:hover {
-  color: slateblue !important;
+  color: #2d5016 !important;
   transition: 0.5s;
   font-weight: bold;
 }
@@ -154,7 +165,7 @@ a:hover {
 }
 
 .navbar-toggler:hover {
-  color: slateblue !important;
+  color: #98fb98 !important;
   transition: 0.3s;
 }
 
@@ -179,7 +190,7 @@ a:hover {
   /* Gives that scrolling effect as the typing happens */
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid slateblue;
+  border-right: 0.15em solid #98fb98;
   /* The typwriter cursor */
 }
 
@@ -192,7 +203,7 @@ h2 {
 
 span {
   font-family: monospace;
-  color: slateblue;
+  color: #98fb98;
 }
 
 p {
@@ -204,14 +215,24 @@ p {
 
 .btn {
   border: 3px solid !important;
-  background-color: lavender !important;
+  background-color: #98fb98 !important;
   border-radius: 10px;
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 900 !important;
   font-family: monospace !important;
-  box-shadow: 5px 5px;
+  box-shadow: 5px 5px #2d5016;
   margin-top: 2em;
+}
+
+/* button dark-mode */
+body.dark-mode .btn {
+  border-color: black !important;
+  box-shadow: 5px 5px black;
+}
+
+.btn:hover {
+  border-color: #2d5016 !important;
 }
 
 
@@ -222,8 +243,15 @@ p {
   height: 20em;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 7px 7px black;
+  box-shadow: 7px 7px #2d5016;
   margin-top: 2em;
+  object-fit: cover;
+}
+
+/* dark-mode adjustments */
+body.dark-mode .sofia,
+body.dark-mode .todo {
+  box-shadow: 7px 7px black;
 }
 
 .sofia:hover {
@@ -256,7 +284,7 @@ ul {
 .fa-figma:hover,
 .fa-codepen:hover,
 .fa-dribbble:hover {
-  color: slateblue;
+  color: #98fb98;
   transition: all 0.5s;
 }
 
@@ -398,7 +426,7 @@ svg {
   font-size: 1.5rem;
   font-weight: 900;
   margin-top: 2em;
-  color: slateblue !important;
+  color: #98fb98 !important;
 }
 
 .todo {
