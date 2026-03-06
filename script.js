@@ -38,4 +38,14 @@ function toggleDarkMode() {
   body.classList.toggle("dark-mode");
   icon.classList.toggle("fa-moon");
   icon.classList.toggle("fa-sun");
+  
+  // Force navbar link colors
+  var navLinks = document.querySelectorAll('.navbar .nav-link');
+  navLinks.forEach(function(link) {
+    if (body.classList.contains('dark-mode')) {
+      link.style.color = '#ffffff';
+    } else {
+      link.style.color = '#2a2a2a';
+    }
+  });
 }
