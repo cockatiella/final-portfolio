@@ -7,6 +7,10 @@
 html,
 body {
   background-color: #ebfdeb !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 body.dark-mode,
@@ -120,37 +124,42 @@ body.dark-mode .nav-link {
   }
 
   50% {
-    border-color: #2d5016;
+    border-color: #98fb98;
   }
 }
 
-/* navigation bar */
-
-.navbar {
-  border-bottom: 3px solid;
-  margin-bottom: 0;
-}
+/* navigation bar */\n\n.navbar {\n  border-bottom: 3px solid #98fb98;\n  margin-bottom: 0;\n  background-color: #2d5a3a !important;\n}
 
 .navbar a {
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   text-decoration: none;
   padding: 10px;
   transition: 0.5s;
+  color: #2a2a2a !important;
 }
 
 .navbar li {
   font-size: 1em;
   font-weight: bold;
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
   padding: 5px;
+  color: #2a2a2a;
 }
 
 a:hover {
-  color: #2d5016 !important;
+  color: #98fb98 !important;
   transition: 0.5s;
   font-weight: bold;
+}
+
+a:hover .btn,
+a .btn:hover,
+.card-body a:hover .btn,
+.card-body a .btn:hover {
+  color: black !important;
+  font-weight: 700 !important;
 }
 
 .navbar-toggler {
@@ -177,9 +186,9 @@ a:hover {
 }
 
 .title {
-  font-family: "JetBrains Mono", monospace !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: 700;
   margin-top: 2em;
   letter-spacing: 0em;
   /* Adjust as needed */
@@ -195,19 +204,19 @@ a:hover {
 }
 
 h2 {
-  font-family: monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 3rem !important;
-  font-weight: 900;
+  font-weight: 700;
   color: rgb(80, 80, 80);
 }
 
 span {
-  font-family: monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #98fb98;
 }
 
 p {
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: black;
   margin-bottom: 2em;
@@ -220,9 +229,10 @@ p {
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 900 !important;
-  font-family: monospace !important;
+  font-family: "Poppins", sans-serif !important;
   box-shadow: 5px 5px #2d5016;
   margin-top: 2em;
+  color: black !important;
 }
 
 /* button dark-mode */
@@ -243,7 +253,7 @@ body.dark-mode .btn {
   height: 20em;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 7px 7px #2d5016;
+  box-shadow: 7px 7px black;
   margin-top: 2em;
   object-fit: cover;
 }
@@ -302,9 +312,9 @@ ul {
 }
 
 .title-2 {
-  font-family: "JetBrains Mono", monospace !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 2em;
 }
 
@@ -314,7 +324,7 @@ ul {
 
 .small {
   color: black;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -422,9 +432,9 @@ svg {
 /* projects */
 
 .title-3 {
-  font-family: monospace !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   margin-top: 2em;
   color: #98fb98 !important;
 }
@@ -440,6 +450,21 @@ svg {
   border: none !important;
 }
 
+.card-body {
+  background-color: transparent !important;
+}
+
+.card-text {
+  color: black !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.card-body .btn {
+  display: inline-block !important;
+  color: black !important;
+}
+
 .card:hover {
   transform: translateY(-8px);
   transition: all 0.5s;
@@ -447,9 +472,9 @@ svg {
 }
 
 h3 {
-  font-family: monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* contact */
@@ -476,7 +501,7 @@ h3 {
     height: 80px;
     width: 200px;
     font-size: 1.5em !important;
-    font-family: monospace !important;
+    font-family: "Poppins", sans-serif !important;
     margin-bottom: 2em;
   }
 
@@ -492,6 +517,10 @@ h3 {
   justify-content: center;
   align-items: center;
   border-top: 2px solid;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  margin-top: 5em;
+  background-color: #2d5a3a !important;
 }
 
 .contact-links {
@@ -501,25 +530,38 @@ h3 {
 }
 
 .footer p {
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
-  color: black;
+  color: white;
+}
+
+body.dark-mode .footer,
+body.dark-mode .footer p {
+  background-color: #2d5a3a;
+  color: white;
+  border-top-color: #1a3a26;
+}
+
+body.dark-mode .footer p {
+  color: white;
 }
 
 .fa-arrow-up {
   font-size: 2em;
-  color: black;
+  color: #2a2a2a;
 }
 
 .back-to-top {
   text-align: center;
+  width: 100%;
+  position: relative;
 }
 
 .back-to-top a {
   text-decoration: none;
-  color: black;
-  font-family: "JetBrains Mono", monospace;
+  color: white;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -545,5 +587,19 @@ h3 {
     height: 50px;
     width: 200px;
     font-size: 1em !important;
+  }
+
+  .footer {
+    height: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .back-to-top a {
+    font-size: 0.8rem;
   }
 }
