@@ -1,21 +1,139 @@
-.dark-mode {
-  background-color: #333;
-  color: white;
+/* ========== Variables CSS ========== */
+:root {
+  --color-primary: #98fb98;
+  --color-dark-green: #2d5a3a;
+  --color-darker-green: #1a3a26;
+  --color-very-dark-green: #2d5016;
+  --color-text-dark: #2a2a2a;
+  --color-text-light: #f0f0f0;
+  --color-bg-light: #ebfdeb;
+  --color-bg-dark: #333;
+  --font-primary: "Poppins", sans-serif;
+  --font-title: "IBM Plex Sans", sans-serif;
+  --transition-speed: 0.5s;
+  --shadow-main: 7px 7px black;
+  --shadow-btn: 5px 5px var(--color-very-dark-green);
 }
 
-/* light-mode background, overridden when dark-mode class is present */
-html,
-body {
-  background-color: #ebfdeb !important;
+/* ========== Base ========== */
+html, body {
+  background-color: var(--color-bg-light) !important;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-body.dark-mode,
-html.dark-mode {
-  background-color: #333 !important;
+.main {
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--color-primary) !important;
+  transition: var(--transition-speed);
+  font-weight: bold;
+}
+
+/* ========== Typography ========== */
+.title {
+  font-family: var(--font-title) !important;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 2em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  margin: 0 auto;
+  overflow: hidden;
+  border-right: 0.15em solid var(--color-primary);
+}
+
+.title-2 {
+  font-family: var(--font-title) !important;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 2em;
+}
+
+.title-3 {
+  font-family: var(--font-title) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2em;
+  color: var(--color-primary) !important;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 3rem !important;
+  font-weight: 700;
+  color: rgb(80, 80, 80);
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+span {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+}
+
+p {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 2em;
+}
+
+.small {
+  color: black;
+  font-family: var(--font-primary);
+  text-align: center;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  border: 3px solid !important;
+  background-color: var(--color-primary) !important;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 900 !important;
+  font-family: var(--font-primary) !important;
+  box-shadow: var(--shadow-btn);
+  margin-top: 2em;
+  color: black !important;
+}
+
+.btn:hover {
+  border-color: var(--color-very-dark-green) !important;
+}
+
+a:hover .btn,
+a .btn:hover,
+.card-body a:hover .btn,
+.card-body a .btn:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+.card-body .btn {
+  display: inline-block !important;
+  color: black !important;
 }
 
 .btn-dark-mode {
@@ -25,38 +143,122 @@ html.dark-mode {
   cursor: pointer;
 }
 
-body.dark-mode .fa-bootstrap {
-  color: #589258;
+.contact .btn-2 {
+  height: 80px;
+  width: 200px;
+  font-size: 1.5em !important;
+  font-family: var(--font-primary) !important;
+  margin-bottom: 2em;
 }
 
-body.dark-mode .fa-css3-alt {
-  color: rgb(0, 110, 255);
+/* ========== Navigation ========== */
+.navbar {
+  margin-bottom: 0;
+  background-color: var(--color-dark-green) !important;
 }
 
-body.dark-mode .fa-html5 {
-  color: rgb(255, 0, 0);
+.navbar a {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  transition: var(--transition-speed);
+  color: var(--color-text-dark);
 }
 
-body.dark-mode .fa-js-square {
-  color: rgb(255, 255, 0);
+.navbar li {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: var(--font-primary);
+  padding: 5px;
+  color: var(--color-text-dark);
 }
 
-body.dark-mode .fa-react {
-  color: rgb(0, 255, 255);
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: white !important;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  padding: 10px;
 }
 
-body.dark-mode .fa-sass {
-  color: rgb(255, 0, 255);
+.navbar-toggler:hover {
+  color: var(--color-primary) !important;
+  transition: 0.3s;
 }
 
-body.dark-mode .fa-node-js {
-  color: rgb(0, 255, 0);
+/* ========== Layout ========== */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
 }
 
-body.dark-mode .btn:hover {
-  background-color: #589258 !important;
-  color: white !important;
-  transition: 0.5s;
+.hr {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+.about {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+/* ========== Images ========== */
+.sofia,
+.todo {
+  width: 16em;
+  height: 20em;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: var(--shadow-main);
+  margin-top: 2em;
+  object-fit: cover;
+}
+
+.sofia:hover {
+  cursor: pointer;
+}
+
+.todo {
+  width: 150px;
+  height: auto;
+}
+
+/* ========== Icons & Technologies ========== */
+i {
+  font-size: 5em;
+}
+
+svg {
+  width: 5em;
+  height: 5em;
+}
+
+.fa-envelope,
+.fa-github,
+.fa-linkedin,
+.fa-figma,
+.fa-codepen,
+.fa-dribbble {
+  font-size: 2em;
+  margin: 1em;
+  color: black;
+}
+
+.fa-envelope:hover,
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-figma:hover,
+.fa-codepen:hover,
+.fa-dribbble:hover {
+  color: var(--color-primary);
+  transition: all var(--transition-speed);
 }
 
 .fa-moon {
@@ -81,264 +283,23 @@ body.dark-mode .btn:hover {
   color: lemonchiffon;
 }
 
-body.dark-mode p {
-  color: #98fb98;
-}
-
-body.dark-mode i {
-  color: white;
-}
-
-body.dark-mode small {
-  color: white;
-}
-
-body.dark-mode .navbar-nav .nav-link,
-body.dark-mode .navbar li {
-  color: white !important;
-}
-
-/* other CSS rules */
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: #98fb98;
-  }
-}
-
-/* navigation bar */
-
-.navbar {
-  border-bottom: 3px solid #98fb98;
-  margin-bottom: 0;
-  background-color: #2d5a3a !important;
-}
-
-.navbar a {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 10px;
-  transition: 0.5s;
-  color: #2a2a2a;
-}
-
-.navbar li {
-  font-size: 1em;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  padding: 5px;
-  color: #2a2a2a;
-}
-
-
-body.dark-mode .navbar a,
-body.dark-mode .navbar li,
-body.dark-mode .navbar .nav-link {
-  color: #f0f0f0 !important;
-}
-
-body.dark-mode .navbar-toggler {
-  background-color: #2d5a3a !important;
-}
-
-a:hover {
-  color: #98fb98 !important;
-  transition: 0.5s;
-  font-weight: bold;
-}
-
-a:hover .btn,
-a .btn:hover,
-.card-body a:hover .btn,
-.card-body a .btn:hover {
-  color: black !important;
-  font-weight: 700 !important;
-}
-
-.navbar-toggler {
-  border: none;
-  outline: none;
-  background-color: white !important;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: 0.3s;
-  padding: 10px;
-  background: white !important;
-}
-
-.navbar-toggler:hover {
-  color: #98fb98 !important;
-  transition: 0.3s;
-}
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-.title {
-  font-family: "IBM Plex Sans", sans-serif !important;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-top: 2em;
-  letter-spacing: 0em;
-  /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #98fb98;
-  /* The typwriter cursor */
-}
-
-h2 {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 3rem !important;
-  font-weight: 700;
-  color: rgb(80, 80, 80);
-}
-
-span {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: #98fb98;
-}
-
-p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  color: black;
-  margin-bottom: 2em;
-}
-
-.btn {
-  border: 3px solid !important;
-  background-color: #98fb98 !important;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: 900 !important;
-  font-family: "Poppins", sans-serif !important;
-  box-shadow: 5px 5px #2d5016;
-  margin-top: 2em;
-  color: black !important;
-}
-
-/* button dark-mode */
-body.dark-mode .btn {
-  border-color: black !important;
-  box-shadow: 5px 5px black;
-}
-
-.btn:hover {
-  border-color: #2d5016 !important;
-}
-
-
-
-.sofia,
-.todo {
-  width: 16em;
-  height: 20em;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 7px 7px black;
-  margin-top: 2em;
-  object-fit: cover;
-}
-
-/* dark-mode adjustments */
-body.dark-mode .sofia,
-body.dark-mode .todo {
-  box-shadow: 7px 7px black;
-}
-
-.sofia:hover {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  padding-left: 0 !important;
-}
-
-.fa-envelope,
-.fa-github,
-.fa-linkedin,
-.fa-figma,
-.fa-codepen,
-.fa-dribbble {
+.fa-arrow-up {
   font-size: 2em;
-  margin: 1em;
-  color: black;
+  color: var(--color-text-dark);
 }
 
-.fa-envelope:hover,
-.fa-github:hover,
-.fa-linkedin:hover,
-.fa-figma:hover,
-.fa-codepen:hover,
-.fa-dribbble:hover {
-  color: #98fb98;
-  transition: all 0.5s;
-}
+/* Icon Colors */
+.fa-bootstrap { color: #9660e7; }
+.fa-html5 { color: #e34f26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js-square { color: #f7df1e; }
+.fa-react { color: #61dafb; }
+.fa-node-js { color: #3c873a; }
+.fa-sass { color: #f032da; }
+.fa-git-alt { color: #f34f29; }
+.xd { color: #470137; }
 
-.hr {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 5em;
-}
-
-/* about me */
-
-.about {
-  margin-top: 5em;
-  margin-bottom: 5em;
-}
-
-.title-2 {
-  font-family: "IBM Plex Sans", sans-serif !important;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-top: 2em;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.small {
-  color: black;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-}
-
+/* ========== Technologies Section ========== */
 .technologies ul {
   display: flex;
   flex-wrap: wrap;
@@ -349,15 +310,6 @@ ul {
 .technologies li {
   margin: 1em;
 }
-
-i {
-  font-size: 5em;
-}
-
-/* i:hover,
-svg:hover {
-  transform: translateY(-8px);
-} */
 
 .vite,
 .canva,
@@ -384,22 +336,9 @@ svg:hover {
   height: auto;
 }
 
-.fa-git-alt {
-  color: #f34f29;
-}
-
 .tailwind {
   width: 6em;
   height: auto;
-}
-
-/* 
-.mongo {
-  color: green;
-} */
-
-.xd {
-  color: #470137;
 }
 
 .figma2 {
@@ -407,54 +346,7 @@ svg:hover {
   height: 5em;
 }
 
-svg {
-  width: 5em;
-  height: 5em;
-}
-
-.fa-bootstrap {
-  color: #9660e7;
-}
-
-.fa-html5 {
-  color: #e34f26;
-}
-
-.fa-css3-alt {
-  color: #264de4;
-}
-
-.fa-js-square {
-  color: #f7df1e;
-}
-
-.fa-react {
-  color: #61dafb;
-}
-
-.fa-node-js {
-  color: #3c873a;
-}
-
-.fa-sass {
-  color: #f032da;
-}
-
-/* projects */
-
-.title-3 {
-  font-family: "IBM Plex Sans", sans-serif !important;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 2em;
-  color: #98fb98 !important;
-}
-
-.todo {
-  width: 150px;
-  height: auto;
-}
-
+/* ========== Cards ========== */
 .card {
   outline: none !important;
   background-color: transparent !important;
@@ -467,29 +359,17 @@ svg {
 
 .card-text {
   color: black !important;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-size: 1rem;
-}
-
-.card-body .btn {
-  display: inline-block !important;
-  color: black !important;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  transition: all 0.5s;
+  transition: all var(--transition-speed);
   cursor: pointer;
 }
 
-h3 {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-/* contact */
-
+/* ========== Contact ========== */
 .contact {
   display: flex;
   flex-direction: row;
@@ -509,57 +389,31 @@ h3 {
   font-size: 9vw;
 }
 
-.contact .btn-2 {
-  height: 80px;
-  width: 200px;
-  font-size: 1.5em !important;
-  font-family: "Poppins", sans-serif !important;
-  margin-bottom: 2em;
-}
-
-
-
-.footer {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid;
-  margin-left: calc(-50vw + 50%);
-  box-sizing: border-box;
-  margin-top: 5em;
-  background-color: #2d5a3a !important;
-}
-
 .contact-links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* ========== Footer ========== */
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--color-dark-green) !important;
+}
+
 .footer p {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-size: 1.2rem;
   font-weight: 900;
   color: white;
-}
-
-body.dark-mode .footer,
-body.dark-mode .footer p {
-  background-color: #2d5a3a;
-  color: white;
-  border-top-color: #1a3a26;
-}
-
-body.dark-mode .footer p {
-  color: white;
-}
-
-.fa-arrow-up {
-  font-size: 2em;
-  color: #2a2a2a;
 }
 
 .back-to-top {
@@ -571,18 +425,96 @@ body.dark-mode .footer p {
 .back-to-top a {
   text-decoration: none;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 400;
 }
 
-/* media query mobile */
+/* ========== Animations ========== */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-primary); }
+}
+
+/* ========== Dark Mode ========== */
+body.dark-mode,
+html.dark-mode {
+  background-color: var(--color-bg-dark) !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .title,
+body.dark-mode .title-2 {
+  color: white;
+}
+
+body.dark-mode p {
+  color: var(--color-primary);
+}
+
+body.dark-mode i,
+body.dark-mode small {
+  color: white;
+}
+
+body.dark-mode .card-text {
+  color: white !important;
+}
+
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .navbar li,
+body.dark-mode .navbar a,
+body.dark-mode .navbar .nav-link {
+  color: var(--color-text-light) !important;
+}
+
+body.dark-mode .navbar-toggler {
+  background-color: var(--color-dark-green) !important;
+}
+
+body.dark-mode .btn {
+  border-color: black !important;
+  box-shadow: 5px 5px black;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #589258 !important;
+  color: white !important;
+  transition: var(--transition-speed);
+}
+
+body.dark-mode .sofia,
+body.dark-mode .todo {
+  box-shadow: var(--shadow-main);
+}
+
+body.dark-mode .footer,
+body.dark-mode .footer p {
+  background-color: var(--color-dark-green);
+  color: white;
+  border-top-color: var(--color-darker-green);
+}
+
+/* Dark mode icon colors */
+body.dark-mode .fa-bootstrap { color: #589258; }
+body.dark-mode .fa-css3-alt { color: rgb(0, 110, 255); }
+body.dark-mode .fa-html5 { color: rgb(255, 0, 0); }
+body.dark-mode .fa-js-square { color: rgb(255, 255, 0); }
+body.dark-mode .fa-react { color: rgb(0, 255, 255); }
+body.dark-mode .fa-sass { color: rgb(255, 0, 255); }
+body.dark-mode .fa-node-js { color: rgb(0, 255, 0); }
+
+/* ========== Media Queries ========== */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem !important;
-  }
-
+  h1 { font-size: 2rem !important; }
+  
   h2 {
     font-size: 2rem !important;
     text-align: center;

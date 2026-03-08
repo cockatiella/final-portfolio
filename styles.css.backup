@@ -1,0 +1,619 @@
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* light-mode background, overridden when dark-mode class is present */
+html,
+body {
+  background-color: #ebfdeb !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+body.dark-mode,
+html.dark-mode {
+  background-color: #333 !important;
+}
+
+.btn-dark-mode {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body.dark-mode .fa-bootstrap {
+  color: #589258;
+}
+
+body.dark-mode .fa-css3-alt {
+  color: rgb(0, 110, 255);
+}
+
+body.dark-mode .fa-html5 {
+  color: rgb(255, 0, 0);
+}
+
+body.dark-mode .fa-js-square {
+  color: rgb(255, 255, 0);
+}
+
+body.dark-mode .fa-react {
+  color: rgb(0, 255, 255);
+}
+
+body.dark-mode .fa-sass {
+  color: rgb(255, 0, 255);
+}
+
+body.dark-mode .fa-node-js {
+  color: rgb(0, 255, 0);
+}
+
+body.dark-mode .btn:hover {
+  background-color: #589258 !important;
+  color: white !important;
+  transition: 0.5s;
+}
+
+.fa-moon {
+  font-size: 2rem;
+  padding: 10px;
+  background: linear-gradient(45deg, lemonchiffon, orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-sun {
+  font-size: 2rem;
+  padding: 10px;
+  background: linear-gradient(45deg, orange, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-moon:active {
+  color: lemonchiffon;
+}
+
+body.dark-mode p {
+  color: #98fb98;
+}
+
+body.dark-mode i {
+  color: white;
+}
+
+body.dark-mode small {
+  color: white;
+}
+
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .navbar li {
+  color: white !important;
+}
+
+/* other CSS rules */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #98fb98;
+  }
+}
+
+/* navigation bar */
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #2d5a3a !important;
+}
+
+.navbar a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.5s;
+  color: #2a2a2a;
+}
+
+.navbar li {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  color: #2a2a2a;
+}
+
+
+body.dark-mode .navbar a,
+body.dark-mode .navbar li,
+body.dark-mode .navbar .nav-link {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .navbar-toggler {
+  background-color: #2d5a3a !important;
+}
+
+a:hover {
+  color: #98fb98 !important;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+a:hover .btn,
+a .btn:hover,
+.card-body a:hover .btn,
+.card-body a .btn:hover {
+  color: black !important;
+  font-weight: 700 !important;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: white !important;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  padding: 10px;
+  background: white !important;
+}
+
+.navbar-toggler:hover {
+  color: #98fb98 !important;
+  transition: 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.title {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 2em;
+  letter-spacing: 0em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #98fb98;
+  /* The typwriter cursor */
+}
+
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3rem !important;
+  font-weight: 700;
+  color: rgb(80, 80, 80);
+}
+
+span {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #98fb98;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 2em;
+}
+
+.btn {
+  border: 3px solid !important;
+  background-color: #98fb98 !important;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 900 !important;
+  font-family: "Poppins", sans-serif !important;
+  box-shadow: 5px 5px #2d5016;
+  margin-top: 2em;
+  color: black !important;
+}
+
+/* button dark-mode */
+body.dark-mode .btn {
+  border-color: black !important;
+  box-shadow: 5px 5px black;
+}
+
+.btn:hover {
+  border-color: #2d5016 !important;
+}
+
+
+
+.sofia,
+.todo {
+  width: 16em;
+  height: 20em;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 7px 7px black;
+  margin-top: 2em;
+  object-fit: cover;
+}
+
+/* dark-mode adjustments */
+body.dark-mode .sofia,
+body.dark-mode .todo {
+  box-shadow: 7px 7px black;
+}
+
+.sofia:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.fa-envelope,
+.fa-github,
+.fa-linkedin,
+.fa-figma,
+.fa-codepen,
+.fa-dribbble {
+  font-size: 2em;
+  margin: 1em;
+  color: black;
+}
+
+.fa-envelope:hover,
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-figma:hover,
+.fa-codepen:hover,
+.fa-dribbble:hover {
+  color: #98fb98;
+  transition: all 0.5s;
+}
+
+.hr {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+/* about me */
+
+.about {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.title-2 {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 2em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.small {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.technologies li {
+  margin: 1em;
+}
+
+i {
+  font-size: 5em;
+}
+
+/* i:hover,
+svg:hover {
+  transform: translateY(-8px);
+} */
+
+.vite,
+.canva,
+.miro,
+.balsamiq,
+.vscode,
+.vue {
+  width: 5em;
+  height: auto;
+}
+
+.trello,
+.jira {
+  width: 8em;
+  height: auto;
+}
+
+.trello {
+  margin-top: 30px;
+}
+
+.npm {
+  width: 8em;
+  height: auto;
+}
+
+.fa-git-alt {
+  color: #f34f29;
+}
+
+.tailwind {
+  width: 6em;
+  height: auto;
+}
+
+/* 
+.mongo {
+  color: green;
+} */
+
+.xd {
+  color: #470137;
+}
+
+.figma2 {
+  width: 5em;
+  height: 5em;
+}
+
+svg {
+  width: 5em;
+  height: 5em;
+}
+
+.fa-bootstrap {
+  color: #9660e7;
+}
+
+.fa-html5 {
+  color: #e34f26;
+}
+
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.fa-js-square {
+  color: #f7df1e;
+}
+
+.fa-react {
+  color: #61dafb;
+}
+
+.fa-node-js {
+  color: #3c873a;
+}
+
+.fa-sass {
+  color: #f032da;
+}
+
+/* projects */
+
+.title-3 {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2em;
+  color: #98fb98 !important;
+}
+
+.todo {
+  width: 150px;
+  height: auto;
+}
+
+.card {
+  outline: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.card-body {
+  background-color: transparent !important;
+}
+
+.card-text {
+  color: black !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.card-body .btn {
+  display: inline-block !important;
+  color: black !important;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* contact */
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+}
+
+.contact .lala {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact .sobre {
+  font-size: 9vw;
+}
+
+.contact .btn-2 {
+  height: 80px;
+  width: 200px;
+  font-size: 1.5em !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-bottom: 2em;
+}
+
+
+
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #2d5a3a !important;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: white;
+}
+
+body.dark-mode .footer,
+body.dark-mode .footer p {
+  background-color: #2d5a3a;
+  color: white;
+  border-top-color: #1a3a26;
+}
+
+body.dark-mode .footer p {
+  color: white;
+}
+
+.fa-arrow-up {
+  font-size: 2em;
+  color: #2a2a2a;
+}
+
+.back-to-top {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* media query mobile */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-2 {
+    height: 50px;
+    width: 200px;
+    font-size: 1em !important;
+  }
+
+  .footer {
+    height: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .back-to-top a {
+    font-size: 0.8rem;
+  }
+}
