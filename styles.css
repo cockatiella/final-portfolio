@@ -1,18 +1,22 @@
 /* ========== Variables CSS ========== */
 :root {
-  --color-primary: #98fb98;
+  --color-primary: #8ecfff;
   --color-dark-green: #2d5a3a;
   --color-darker-green: #1a3a26;
-  --color-very-dark-green: #2d5016;
+  --color-very-dark-green: #689649;
+  --color-baby-blue: #a7d8ff;
+  --color-baby-blue-deep: #7fc3f5;
+  --color-baby-blue-hover: #5aa9de;
+  --color-baby-blue-text: #153247;
   --color-text-dark: #2a2a2a;
   --color-text-light: #f0f0f0;
-  --color-bg-light: #ebfdeb;
+  --color-bg-light: #f1f8ff;
   --color-bg-dark: #333;
   --font-primary: "Poppins", sans-serif;
   --font-title: "IBM Plex Sans", sans-serif;
   --transition-speed: 0.5s;
   --shadow-main: 7px 7px black;
-  --shadow-btn: 5px 5px var(--color-very-dark-green);
+  --shadow-btn: 5px 5px black;
 }
 
 /* ========== Base ========== */
@@ -107,7 +111,7 @@ p {
 
 /* ========== Buttons ========== */
 .btn {
-  border: 3px solid !important;
+  border: 3px solid black !important;
   background-color: var(--color-primary) !important;
   border-radius: 10px;
   padding: 10px;
@@ -120,7 +124,8 @@ p {
 }
 
 .btn:hover {
-  border-color: var(--color-very-dark-green) !important;
+  background-color: var(--color-baby-blue-hover) !important;
+  border-color: black !important;
 }
 
 a:hover .btn,
@@ -138,9 +143,42 @@ a .btn:hover,
 
 .btn-dark-mode {
   outline: none;
-  border: none;
-  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 999px;
+  background-color: var(--color-baby-blue);
   cursor: pointer;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 0;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn {
+  border: 2px solid black;
+  border-radius: 999px;
+  background-color: var(--color-baby-blue);
+  color: var(--color-baby-blue-text);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  transition: var(--transition-speed);
+}
+
+.lang-btn:hover,
+.lang-btn.is-active {
+  background-color: var(--color-baby-blue-hover);
+  color: white;
 }
 
 .contact .btn-2 {
@@ -154,7 +192,7 @@ a .btn:hover,
 /* ========== Navigation ========== */
 .navbar {
   margin-bottom: 0;
-  background-color: var(--color-dark-green) !important;
+  background-color: var(--color-baby-blue) !important;
 }
 
 .navbar a {
@@ -173,6 +211,11 @@ a .btn:hover,
   font-family: var(--font-primary);
   padding: 5px;
   color: var(--color-text-dark);
+}
+
+.navbar a:hover,
+.navbar .nav-link:hover {
+  color: var(--color-baby-blue-hover) !important;
 }
 
 .navbar-toggler {
@@ -406,14 +449,14 @@ svg {
   border-top: 2px solid;
   box-sizing: border-box;
   margin: 0;
-  background-color: var(--color-dark-green) !important;
+  background-color: var(--color-baby-blue) !important;
 }
 
 .footer p {
   font-family: var(--font-primary);
   font-size: 1.2rem;
   font-weight: 900;
-  color: white;
+  color: var(--color-baby-blue-text);
 }
 
 .back-to-top {
@@ -424,7 +467,7 @@ svg {
 
 .back-to-top a {
   text-decoration: none;
-  color: white;
+  color: var(--color-baby-blue-text);
   font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 400;
@@ -475,8 +518,20 @@ body.dark-mode .navbar .nav-link {
   color: var(--color-text-light) !important;
 }
 
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: var(--color-baby-blue-hover) !important;
+}
+
 body.dark-mode .navbar-toggler {
-  background-color: var(--color-dark-green) !important;
+  background-color: var(--color-baby-blue-deep) !important;
+}
+
+body.dark-mode .btn-dark-mode,
+body.dark-mode .lang-btn {
+  background-color: var(--color-baby-blue-deep);
+  color: var(--color-baby-blue-text);
 }
 
 body.dark-mode .btn {
@@ -485,7 +540,7 @@ body.dark-mode .btn {
 }
 
 body.dark-mode .btn:hover {
-  background-color: #589258 !important;
+  background-color: var(--color-baby-blue-hover) !important;
   color: white !important;
   transition: var(--transition-speed);
 }
@@ -497,9 +552,9 @@ body.dark-mode .todo {
 
 body.dark-mode .footer,
 body.dark-mode .footer p {
-  background-color: var(--color-dark-green);
-  color: white;
-  border-top-color: var(--color-darker-green);
+  background-color: var(--color-baby-blue-deep);
+  color: var(--color-baby-blue-text);
+  border-top-color: #5caee6;
 }
 
 /* Dark mode icon colors */
@@ -513,6 +568,11 @@ body.dark-mode .fa-node-js { color: rgb(0, 255, 0); }
 
 /* ========== Media Queries ========== */
 @media (max-width: 768px) {
+  .top-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   h1 { font-size: 2rem !important; }
   
   h2 {
