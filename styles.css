@@ -387,6 +387,13 @@ svg {
 .figma2 {
   width: 5em;
   height: 5em;
+  object-fit: contain;
+}
+
+.ai-tool {
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
 }
 
 /* ========== Cards ========== */
